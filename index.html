@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Q3 2025 Earnings Report</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css" id="theme">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/monokai.min.css">
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>Q3 2025 Quarterly Earnings Report</h3>
+                <p>Global Finance Corp.</p>
+                <br>
+                <p><small>Presented by: Technical Consultant</small></p>
+                <p><small>Contact: <a href="mailto:23f2003050@ds.study.iitm.ac.in">23f2003050@ds.study.iitm.ac.in</a></small></p>
+                <aside class="notes">
+                    Welcome everyone. Thank you for joining. Today, we'll be reviewing our strong financial performance for the third quarter of 2025 and discussing the technical innovations driving our growth.
+                </aside>
+            </section>
+
+            <section data-markdown>
+                <script type="text/template">
+                    ## Financial Highlights (YoY)
+                    * **Total Revenue:** $15.2 Billion (+12%)
+                    * **Net Income:** $3.8 Billion (+15%)
+                    * **Earnings Per Share (EPS):** $1.45 (+18%)
+                    * **Operating Margin:** 28.5%
+                </script>
+                <aside class="notes">
+                    As you can see, we've had a fantastic quarter with double-digit growth across all key metrics. This performance is a testament to our team's execution and our strategic investments.
+                </aside>
+            </section>
+
+            <section>
+                <h3>Revenue Growth Drivers</h3>
+                <ul>
+                    <li class="fragment">📈 **Digital Banking:** Platform adoption up 40%</li>
+                    <li class="fragment">💼 **Wealth Management:** Assets Under Management (AUM) grew by $50B</li>
+                    <li class="fragment">💳 **Payment Solutions:** Transaction volume increased by 22%</li>
+                </ul>
+                <aside class="notes">
+                    Let's break down where this growth came from.
+                    First, our new digital banking platform has seen phenomenal adoption.
+                    Second, our wealth management division continues to attract significant capital.
+                    Finally, our payment solutions arm is capturing more market share.
+                </aside>
+            </section>
+
+            <section>
+                <h3>Profitability Analysis</h3>
+                <p>Our Net Profit Margin remains industry-leading.</p>
+                <p>
+                    The formula is defined as:
+                    $$ \text{Net Profit Margin} = \frac{\text{Net Income}}{\text{Revenue}} \times 100\% $$
+                </p>
+                <p>
+                    For Q3 2025, our calculation is:
+                    $$ \frac{\$3.8B}{\$15.2B} \times 100\% = \mathbf{25\%} $$
+                </p>
+                <aside class="notes">
+                    Our profitability is a key strength. A 25% net profit margin indicates excellent operational efficiency and strong pricing power in our core markets.
+                </aside>
+            </section>
+
+            <section>
+                <h3>Automating Financial Analysis</h3>
+                <p>We leverage Python for rapid data analysis. Here’s a sample script:</p>
+                <pre><code class="language-python" data-line-numbers="1-5|7-9">
+                    import pandas as pd
+
+                    # Load quarterly data from a CSV file
+                    data = pd.read_csv('q3_earnings.csv')
+                    print(data.describe())
+
+                    # Calculate key performance indicators (KPIs)
+                    data['profit_margin'] = data['net_income'] / data['revenue']
+                    print(f"Average Profit Margin: {data['profit_margin'].mean():.2%}")
+                </code></pre>
+                <aside class="notes">
+                    To maintain our edge, we heavily invest in technology. This is a simplified Python script, similar to what our quant teams use. It automates the process of loading data and calculating key metrics, allowing us to generate insights in minutes, not hours.
+                </aside>
+            </section>
+
+            <section>
+                <h3>Forward Outlook & Q&A</h3>
+                <p>Thank You</p>
+                <aside class="notes">
+                    Looking ahead, we are confident in our strategy and will continue to invest in the technologies that drive our business forward. I will now open the floor for any questions you may have.
+                </aside>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/notes/notes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/math/math.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+        });
+    </script>
+</body>
+</html>
