@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q2 Earnings – Interactive Deck</title>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/plugin/highlight/monokai.css">
+  <style>
+    .footer {
+      position: absolute; bottom: 12px; left: 24px; font-size: 16px; opacity: 0.6;
+    }
+    .kpi { display:grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; margin-top: 24px;}
+    .kpi .card { padding: 18px; border-radius: 14px; background: rgba(255,255,255,0.06); box-shadow: 0 6px 22px rgba(0,0,0,0.25); }
+    .card h3 { margin: 4px 0 8px; }
+  </style>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- Title -->
+    <section data-background-gradient="radial-gradient(#1f2937, #0b1020)">
+      <h1>Quarterly Earnings Report</h1>
+      <h3>Interactive Stakeholder Briefing</h3>
+      <p class="footer">Contact: <strong>23f2003050@ds.study.iitm.ac.in</strong></p>
+      <aside class="notes">
+        Welcome the audience. Mention that this deck uses RevealJS with Markdown, fragments,
+        syntax highlighting, math, and notes. Share the GitHub Pages link at the end.
+      </aside>
+    </section>
+
+    <!-- Markdown slide (at least one) -->
+    <section data-markdown data-separator="^---$" data-separator-vertical="^--$" data-charset="utf-8">
+      <textarea data-template>
+# Agenda
+- Results overview
+- KPI deep dive
+- Guidance & risks
+- Q&amp;A
+
+---
+
+### Highlights (QoQ)
+- **Revenue**: +8.4% _fragment_
+- **EPS**: +11.2% _fragment_
+- **Operating Margin**: 27.6% _fragment_
+
+<aside class="notes">
+Call out that revenue growth was broad-based. EPS beat driven by buybacks and mix.
+</aside>
+      </textarea>
+    </section>
+
+    <!-- KPI Grid with fragments -->
+    <section>
+      <h2>Key Performance Indicators</h2>
+      <div class="kpi">
+        <div class="card fragment">
+          <h3>Revenue</h3>
+          <p><strong>$3.42B</strong> (+8.4% QoQ)</p>
+        </div>
+        <div class="card fragment">
+          <h3>EPS (Diluted)</h3>
+          <p><strong>$1.32</strong> (+11.2% QoQ)</p>
+        </div>
+        <div class="card fragment">
+          <h3>Op. Margin</h3>
+          <p><strong>27.6%</strong> (+120 bps)</p>
+        </div>
+      </div>
+      <aside class="notes">
+        Advance one fragment at a time to pace the reveal. Keep commentary concise.
+      </aside>
+    </section>
+
+    <!-- Code sample with syntax highlighting -->
+    <section>
+      <h2>Scenario Analysis (Python)</h2>
+      <pre><code class="language-python" data-trim>
+import numpy as np
+
+def cagr(begin, end, years):
+    return (end / begin) ** (1/years) - 1
+
+revenue = np.array([3.15, 3.42])  # $B
+eps = np.array([1.19, 1.32])      # $
+
+rev_growth = (revenue[-1]/revenue[0]) - 1
+eps_growth = (eps[-1]/eps[0]) - 1
+three_year_cagr = cagr(2.10, 3.42, 3)
+
+print(f"QoQ Revenue Growth: {rev_growth:.2%}")
+print(f"QoQ EPS Growth: {eps_growth:.2%}")
+print(f"3Y CAGR (Revenue): {three_year_cagr:.2%}")
+      </code></pre>
+      <aside class="notes">
+        Highlight the use of reproducible code for auditability. Mention that actual
+        models live in the analytics repo; this is a toy snippet for the deck.
+      </aside>
+    </section>
+
+    <!-- Math formulas -->
+    <section>
+      <h2>Financial Math</h2>
+      <p>
+        Net Present Value (NPV):
+        \[ \mathrm{NPV} = \sum_{t=0}^{T} \frac{CF_t}{(1+r)^t} \]
+      </p>
+      <p class="fragment">
+        Weighted Average Cost of Capital (WACC):
+        \[ \mathrm{WACC} = \frac{E}{D+E} r_e + \frac{D}{D+E} r_d (1-\tau) \]
+      </p>
+      <p class="fragment">
+        CAGR:
+        \[ \mathrm{CAGR} = \left(\frac{\text{Ending}}{\text{Beginning}}\right)^{1/n} - 1 \]
+      </p>
+      <aside class="notes">
+        Explain discount rate assumptions and sensitivity. Use fragments to walk through.
+      </aside>
+    </section>
+
+    <!-- Guidance with fragments -->
+    <section>
+      <h2>Guidance (FY)</h2>
+      <ul>
+        <li class="fragment">Revenue growth: <strong>7–9%</strong></li>
+        <li class="fragment">OpEx flat to +2%</li>
+        <li class="fragment">Share repurchases: $500–700M</li>
+      </ul>
+      <aside class="notes">
+        Provide basis for guidance. Note macro assumptions and FX headwinds.
+      </aside>
+    </section>
+
+    <!-- Final slide with link placeholder -->
+    <section>
+      <h2>Deck on GitHub Pages</h2>
+      <p>URL: <code>https://&lt;YOUR-USER&gt;.github.io/&lt;YOUR-REPO&gt;/</code></p>
+      <p class="footer">Contact: <strong>23f2003050@ds.study.iitm.ac.in</strong></p>
+      <aside class="notes">
+        Replace the placeholder with your GitHub username and repository.
+        Ensure Pages is enabled from the main branch, / (root).
+      </aside>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://unpkg.com/reveal.js@5/dist/reveal.js"></script>
+<script src="https://unpkg.com/reveal.js@5/plugin/markdown/markdown.js"></script>
+<script src="https://unpkg.com/reveal.js@5/plugin/highlight/highlight.js"></script>
+<script src="https://unpkg.com/reveal.js@5/plugin/notes/notes.js"></script>
+<script src="https://unpkg.com/reveal.js@5/plugin/math/math.js"></script>
+
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ],
+    // KaTeX auto-loaded by plugin; you can override with math: { ... }
+  });
+</script>
+</body>
+</html>
